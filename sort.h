@@ -1,8 +1,8 @@
 #ifndef SORT_H
-#definre SORT_H
+#define SORT_H
 
 /* Standard Libraries*/
-#include <stdio.h>>
+#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
@@ -27,7 +27,8 @@ typedef struct listint_s
 /* Function Prototypes */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
-
+int proof_read_array(int *, int);
+void bubble_sort(int *array, size_t size);
 
 
 
