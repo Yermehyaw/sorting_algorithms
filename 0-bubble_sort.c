@@ -23,10 +23,10 @@ void bubble_sort(int *array, size_t size)
 				swap = array[i]; /* Larger value */
 				array[i] = array[i + 1];
 				array[i + 1] = swap;
+				print_array(array, size);
 			}
 			++i;
 		}
-		print_array(array, size);
 	}
 }
 
