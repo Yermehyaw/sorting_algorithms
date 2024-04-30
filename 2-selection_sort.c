@@ -1,4 +1,4 @@
-#incude "sort.h"
+#include "sort.h"
 
 /**
  * selection_sort - Sorts an array of intefers using selection sort algo.
@@ -9,30 +9,27 @@
 
 void selection_sort(int *array, size_t size)
 {
-	int smallest;
-	size_t i, j, k;
+	size_t smallest; /*index of the smallest elem of the array*/
+	size_t i, j, temp;
 
 	if (size < 2 || array == NULL)
 		return;
-	smallest = array[0]; /* Any arbitrary starting value */
-	j = k = 0;
-	for (i = 0; i < size; ++i)
+	for (i = 0; i < (size - 1); ++i)
 	{
-		while (j < size) /*iterate till a smaller value is found */
+		smallest = i; /* An arbitrary starting value */
+		/*iterate till a smaller value is found */
+		for (j = i + 1; j < size; ++j)
 		{
-			if (array[k] < smallest)
-				smallest = array[k];
-			++j;
+			if (array[j] < array[smallest])
+				smallest = j;
 		}
-		array[i] = smallest; /* Set the smallest val to 0th index*/
-		smallest = array[i + 1]; /*Use a diff arbitrary value*/
-		k += 1; /**
-			 * Next iteration shouldnt start from previous starting
-			 * index i.e once a smaller value is found and placed at
-			 * the beginning of the array, that vaue shouldnt be
-			 * compared for smallest with remaing values of the
-			 * array
-			 */
-
+		if (smallest != i)/*if a smaller value is found */
+		{
+			/*swap the ith index for the smaller element*/
+			temp = array[i];
+			array[i] = array[smallest];
+			array[smallest] = temp;
+			print_array(array, size);
+		}
 	}
 }
