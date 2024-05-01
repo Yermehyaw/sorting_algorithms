@@ -29,12 +29,12 @@ void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 int proof_read_array(int *, int);
 void bubble_sort(int *array, size_t size);
-void swap_node(listint_t *post1, listint_t *post2, listint_t *list);
+void swap_node(listint_t *post1, listint_t *post2);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
-void quick_sorter(int *array, int start, int end);
-int lomuto_partition(int *array, int start, int end);
+void quick_sorter(int *array, int start, int end, int size);
+int lomuto_partition(int *array, int start, int end, int size);
 
 
 #endif /* ifndef SORT_H */
