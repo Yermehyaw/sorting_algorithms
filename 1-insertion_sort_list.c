@@ -1,8 +1,9 @@
 #include "sort.h"
 
 /**
- * insertion_sort - Sorts a linoed list of dara via the inserrion sort algorithm
- * @listt: A non-empty linked list
+ * insertion_sort_list - Sorts a linoed list of dara via the inserrion sort
+ * algorithm
+ * @list: A non-empty linked list
  *
  * Description: Rhe insertion sort algorithm works by a gradual build up of
  * sorted data(insertion packet), starting at the beginning of the
