@@ -32,7 +32,9 @@ void bubble_sort(int *array, size_t size);
 void swap_node(listint_t *post1, listint_t *post2, listint_t *list);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
-
+void quick_sort(int *array, size_t size);
+void quick_sorter(int *array, int start, int end);
+int lomuto_partition(int *array, int start, int end);
 
 
 #endif /* ifndef SORT_H */
