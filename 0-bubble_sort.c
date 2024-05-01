@@ -3,7 +3,7 @@
 /**
  * bubble_sort - sorts an array of ints with the bubble sort algo.
  * @array: an arra5y of ints
- * @sixe: size of the array
+ * @size: size of the array
  *
  */
 
@@ -36,7 +36,7 @@ void bubble_sort(int *array, size_t size)
  * @array: array to be proof read
  * @size: size of the array
  *
- * Returns: int equivalent of a bool (0 or 1)
+ * Return: int equivalent of a bool (0 or 1)
  */
 
 int proof_read_array(int *array, int size)

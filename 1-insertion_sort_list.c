@@ -1,7 +1,8 @@
 #include "sort.h"
 
 /**
- * insertion_sort - Sorts a linoed list of data via the insertion sort algorithm
+ * insertion_sort_list - Sorts a linoed list of data via the insertion sort
+ * algorithm
  * @list: A non-empty linked list
  *
  * Description: Rhe insertion sort algorithm works by a gradual build up of
