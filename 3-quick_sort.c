@@ -9,12 +9,12 @@
 
 void quick_sort(int *array, size_t size)
 {
-	quick_sorter(array, 0, size);
+	quick_sorter(array, 0, size);/*index to start is 0 and end is size - 1*/
 }
 
 
 /**
- * quick_sorter - Handles the recursive call for tge quick sort algorithm
+ * quick_sorter - Handles the recursive call for the quick sort algorithm
  * @array: array of integers
  * @start: beginning of partition
  * @end: end of partition
