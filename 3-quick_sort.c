@@ -53,23 +53,22 @@ int lomuto_partition(int *array, int start, int end, int size)
 
 	pivot_val = array[end];
 	/*j and i are the two partioning pointers*/
-	i = start; /* partition index */
-	for (j = start; j <= end - 1; ++j)
+	i = start - 1; /* partition index */
+	for (j = start; j < end; ++j)
 	{
-		if (array[j] <= pivot_val)/*if any value is less than pivot*/
+		if (array[j] < pivot_val)/*if any value is less than pivot*/
 		{
+			++i;
 			/*move to ith position*/
 			temp = array[j];
 			array[j] = array[i];
 			array[i] = temp;
-/*			print_array(array, end + 1);*/
-			++i;
 		}
 	}
 	/*swap value at partition idx i with val at end i.e pivot_val*/
-	temp = array[i];
-	array[i] = array[end];
+	temp = array[i + 1];
+	array[i + 1] = array[end];
 	array[end] = temp;
 	print_array(array, size);
-	return (i); /*i is at the partitioning index*/
+	return (i + 1); /*i is at the partitioning index*/
 }
